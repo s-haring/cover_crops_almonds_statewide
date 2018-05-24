@@ -27,9 +27,8 @@ Year,Month,Day,Location,Rep,Treatment,TermTiming,Zone,Species,Intercepts
 2018,2,14,Tehama,1,Soil,Late,Strip,MEDPO,1
 2018,2,14,Tehama,1,Soil,Late,Strip,NONE,42
 2018,2,14,Tehama,2,Standard,Late,Alley,CYNDA,4
-2018,2,14,Tehama,2,Standard,Late,Alley,ANGAR,3
 2018,2,14,Tehama,2,Standard,Late,Alley,EROMO,3
-2018,2,14,Tehama,2,Standard,Late,Alley,ANGAR,8
+2018,2,14,Tehama,2,Standard,Late,Alley,ANGAR,11
 2018,2,14,Tehama,2,Standard,Late,Alley,CAPBP,1
 2018,2,14,Tehama,2,Standard,Late,Alley,BROIN,1
 2018,2,14,Tehama,2,Standard,Late,Alley,EROCI,8
@@ -390,7 +389,7 @@ Year,Month,Day,Location,Rep,Treatment,TermTiming,Zone,Species,Intercepts
 2018,3,27,Kern,2,Soil,Early,Alley,SINAL,9
 2018,3,27,Kern,2,Soil,Early,Alley,LOLMU,12
 2018,3,27,Kern,2,Soil,Early,Alley,STEME,14
-2018,3,27,Kern,2,Soil,Early,Alley,POAN,11
+2018,3,27,Kern,2,Soil,Early,Alley,POAAN,11
 2018,3,27,Kern,2,Soil,Early,Alley,VICVI,1
 2018,3,27,Kern,2,Soil,Early,Alley,NONE,3
 2018,3,27,Kern,2,Soil,Early,Strip,NONE,50
