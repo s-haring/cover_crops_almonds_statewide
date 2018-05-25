@@ -25,6 +25,21 @@ WeedCommunityMatrix <- WeedSurveys %>%
 
 # Calculate Shannon Diversity for each plot
 library(vegan)
-shannon <- diversity(WeedCommunityMatrix, index = "shannon", )
-?diversity
-mutate( )
+ShannonMatrix <- WeedCommunityMatrix %>%
+  select(-Month, -Location, -Rep, -Treatment) # create a new dataframe with just the species counts, as needed for diversity() 
+shannon <- diversity(ShannonMatrix, index = "shannon") # calculate Shannon H into a new vector
+WeedCommunityMatrix <- WeedCommunityMatrix %>%
+  mutate(H = shannon) # add that vector back into original dataframe
+rm(shannon, ShannonMatrix) # clean up the leftover objects
+
+# Make the figure
+library(ggthemes)
+ggplot(WeedCommunityMatrix, aes(x = Treatment, y = H)) + # set simple axes (treatment by diversity)
+  geom_boxplot(size = 0.8) + # boxplot with slightly thicker lines
+  facet_wrap("Location") + #include each location in a separate panel
+  labs(title = "Shannon Diversity of Weeds") + # figure title
+  theme_few(base_size = 18) + # few theme
+  theme(axis.text.x = element_text(angle =90, hjust = 1)) # rotate and align x axis titles
+ggsave("output/20180524_WeedSpeciesRichness.wmf")
+ggsave("output/20180524_WeedSpeciesRichness.svg")
+ggsave("output/20180524_WeedSpeciesRichness.jpeg", dpi = 600)
