@@ -73,10 +73,12 @@ SpeciesCounts <- PercentCover %>%
   summarise(richness = n_distinct(Species))
 
 #make the figure
+windowsFonts(Times=windowsFont("Times New Roman"))
 ggplot(data = SpeciesCounts, aes(x = Treatment, y = richness)) +
   geom_boxplot() +
   facet_wrap(~ Location) +
-  theme_bw()
+  theme_bw() +
+  theme(text=element_text(family="Times", size=12))
 
 # Cover crop establishment by species -------------------------------------
 
